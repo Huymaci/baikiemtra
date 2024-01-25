@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function timDiemCaoThuBa(diem) {
+        if (diem.length < 3) {
+            console.log("Không đủ số");
+            return;
+        }
+        let diemCaoNhat = diem[0];
+        let diemCaoThuHai = diem[1];
+        let diemCaoThuBa = diem[2];
+
+        for (let i = 3; i < diem.length; i++) {
+            if (diem[i] > diemCaoNhat) {
+                diemCaoThuBa = diemCaoThuHai;
+                diemCaoThuHai = diemCaoNhat;
+                diemCaoNhat = diem[i];
+            } else if (diem[i] > diemCaoThuHai) {
+                diemCaoThuBa = diemCaoThuHai;
+                diemCaoThuHai = diem[i];
+            } else if (diem[i] > diemCaoThuBa) {
+                diemCaoThuBa = diem[i];
+            }
+        }
+        console.log(diemCaoThuBa);
+    }
+</script>
+</body>
+</html>

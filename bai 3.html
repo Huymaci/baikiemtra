@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTraChuoi(str1, str2) {
+        for (let i = 0; i <= str2.length - str1.length; i++) {
+            let coMatch = true;
+            for (let j = 0; j < str1.length; j++) {
+                if (str1[j] !== str2[i + j]) {
+                    coMatch = false;
+                    break;
+                }
+            }
+            if (coMatch) {
+                return true;
+            }
+        }
+        return false;
+    }
+</script>
+</body>
+</html>
